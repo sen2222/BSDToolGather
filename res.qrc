@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>res/BSDLogo.png</file>
+        <file>res/test.ico</file>
+    </qresource>
+</RCC>

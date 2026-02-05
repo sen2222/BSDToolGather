@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>GetImgView</class>
+ <widget class="QWidget" name="GetImgView">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>883</width>
+    <height>810</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout" stretch="7,2">
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="GetImgViewLeft" name="leftWidget" native="true"/>
+   </item>
+   <item>
+    <widget class="GetImgViewRight" name="rightWidget" native="true"/>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>GetImgViewLeft</class>
+   <extends>QWidget</extends>
+   <header location="global">view/inc/getimgviewleft.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>GetImgViewRight</class>
+   <extends>QWidget</extends>
+   <header location="global">view/inc/getimgviewright.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
