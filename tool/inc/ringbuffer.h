@@ -20,12 +20,16 @@ public:
     uint32_t writeWait(uint8_t *data, uint32_t len, int timeoutMs = -1);
     uint32_t readWait(uint8_t *data, uint32_t len, int timeoutMs = -1);
 
+    uint32_t getDataSize(); 
+    uint32_t getCapacity(); 
+    void clear();
+
+private:
     uint32_t availableRead();
     uint32_t availableWrite();
     int isEmpty();
     int isFull();
-    uint32_t getSize();
-    void clear();
+    uint32_t getSize(); 
 
 private:
     uint8_t*     buffer = nullptr;

@@ -77,19 +77,6 @@
       <item row="1" column="1">
        <widget class="QLineEdit" name="lineEditProt1"/>
       </item>
-      <item row="1" column="4">
-       <widget class="QLabel" name="labelProt2">
-        <property name="maximumSize">
-         <size>
-          <width>50</width>
-          <height>16777215</height>
-         </size>
-        </property>
-        <property name="text">
-         <string>prot2:</string>
-        </property>
-       </widget>
-      </item>
       <item row="0" column="3">
        <widget class="QPushButton" name="btnConnect1">
         <property name="text">
@@ -97,13 +84,16 @@
         </property>
        </widget>
       </item>
-      <item row="1" column="3">
-       <widget class="QPushButton" name="btnOpen1">
-        <property name="enabled">
-         <bool>false</bool>
+      <item row="0" column="4">
+       <widget class="QLabel" name="labelIP2">
+        <property name="maximumSize">
+         <size>
+          <width>20</width>
+          <height>16777215</height>
+         </size>
         </property>
         <property name="text">
-         <string/>
+         <string>IP2:</string>
         </property>
        </widget>
       </item>
@@ -120,14 +110,41 @@
         </property>
        </widget>
       </item>
+      <item row="1" column="4">
+       <widget class="QLabel" name="labelProt2">
+        <property name="maximumSize">
+         <size>
+          <width>50</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>prot2:</string>
+        </property>
+       </widget>
+      </item>
       <item row="1" column="5">
        <widget class="QLineEdit" name="lineEditProt2"/>
       </item>
-      <item row="0" column="1">
-       <widget class="QLineEdit" name="lineEditIP1"/>
-      </item>
       <item row="0" column="5">
        <widget class="QLineEdit" name="lineEditIP2"/>
+      </item>
+      <item row="0" column="6">
+       <widget class="QPushButton" name="btnConnect2">
+        <property name="text">
+         <string>connect</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="3">
+       <widget class="QPushButton" name="btnOpen1">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="text">
+         <string>open</string>
+        </property>
+       </widget>
       </item>
       <item row="1" column="6">
        <widget class="QPushButton" name="btnOpen2">
@@ -135,14 +152,7 @@
          <bool>false</bool>
         </property>
         <property name="text">
-         <string/>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="6">
-       <widget class="QPushButton" name="btnConnect2">
-        <property name="text">
-         <string>connect</string>
+         <string>open</string>
         </property>
        </widget>
       </item>
@@ -159,18 +169,8 @@
         </property>
        </widget>
       </item>
-      <item row="0" column="4">
-       <widget class="QLabel" name="labelIP2">
-        <property name="maximumSize">
-         <size>
-          <width>20</width>
-          <height>16777215</height>
-         </size>
-        </property>
-        <property name="text">
-         <string>IP2:</string>
-        </property>
-       </widget>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="lineEditIP1"/>
       </item>
      </layout>
     </widget>

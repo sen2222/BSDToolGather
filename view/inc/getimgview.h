@@ -14,6 +14,10 @@ class GetImgView : public QWidget
 public:
     explicit GetImgView(QWidget *parent = nullptr);
     ~GetImgView();
+    void leftWidgetInit(void);
+    void leftWidgetDeinit(void);
+    void rightWidgetInit(void);
+    void rightWidgetDeinit(void);
 
 private:
     Ui::GetImgView *ui;

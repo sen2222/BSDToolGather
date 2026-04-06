@@ -114,7 +114,6 @@ int OtaPacketApp::packetProcess(OTA_PACKET_PARAM_S* param)
         }
     }
 
-    // 打开打包文件
     packetFile.setFileName(packetName);
     if (!packetFile.open(QIODevice::WriteOnly))
     {
@@ -131,8 +130,6 @@ int OtaPacketApp::packetProcess(OTA_PACKET_PARAM_S* param)
     memcpy(tmpArray.data(), &header, sizeof(header));
     packetFile.write(tmpArray);                         // 写入头文件
 
-
-    // 写入分区头 + 分区数据
     for(int i = 0; i < 10; ++i)
     {
         if(param->isCheck[i])
@@ -149,8 +146,8 @@ int OtaPacketApp::packetProcess(OTA_PACKET_PARAM_S* param)
             entry.target_addr = TO_LE32(0);
             tmpArray.fill('\0');
             memcpy(tmpArray.data(), &entry, sizeof(entry));
-            packetFile.write(tmpArray);                         // 写入分区头
-            packetFile.write(partitionFile.readAll());                         // 写入分区数据
+            packetFile.write(tmpArray);                         
+            packetFile.write(partitionFile.readAll());                        
             partitionFile.close();
             BSD_LOG_INFO(QString("Partition [%1] success >> size: %2.\n").arg(packetGetPartitionName(entry.type)).arg(entry.size));
         }
@@ -167,7 +164,5 @@ int OtaPacketApp::packetProcess(OTA_PACKET_PARAM_S* param)
         }
     }
     packetFile.close();
-    BSD_LOG_INFO(QString("Packet successfully.\n"));
- 
     return 0;
 }

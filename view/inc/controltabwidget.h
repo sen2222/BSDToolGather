@@ -15,8 +15,12 @@ public:
     explicit ControlTabWidget(QWidget *parent = nullptr);
     ~ControlTabWidget();
 
+private slots:
+    void on_tabWidget_currentChanged(int index);
+
 private:
     Ui::ControlTabWidget *ui;
+    int currentTabIndex;
 };
 
 #endif // CONTROLTABWIDGET_H

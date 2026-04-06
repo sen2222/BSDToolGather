@@ -145,6 +145,9 @@ uint32_t RingBuffer::readWait(uint8_t *data, uint32_t len, int timeoutMs)
     return len;
 }
 
+// ==============================
+// 内部使用 → 已私有化
+// ==============================
 uint32_t RingBuffer::availableRead()
 {
     return (writeIndex - readIndex + size) % size;
@@ -166,6 +169,18 @@ int RingBuffer::isFull()
 }
 
 uint32_t RingBuffer::getSize()
+{
+    QMutexLocker locker(&mutex);
+    return size;
+}
+
+uint32_t RingBuffer::getDataSize()
+{
+    QMutexLocker locker(&mutex);
+    return availableRead();
+}
+
+uint32_t RingBuffer::getCapacity()
 {
     QMutexLocker locker(&mutex);
     return size;

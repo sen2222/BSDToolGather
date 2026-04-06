@@ -13,7 +13,7 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <layout class="QHBoxLayout" name="horizontalLayout" stretch="7,2">
+  <layout class="QHBoxLayout" name="horizontalLayout" stretch="4,1">
    <property name="spacing">
     <number>0</number>
    </property>

@@ -1,13 +1,20 @@
 #include "mainlogwidget.h"
 #include "ui_mainlogwidget.h"
 #include "logoutput.h"
+#include "alltoolfun.h"
 
 MainLogWidget::MainLogWidget(QWidget *parent)
     : QWidget(parent)
     , ui(new Ui::MainLogWidget)
 {
+    QString author  = QString(">作者: %1\n").arg("sent");
+    QString email   = QString(">邮箱: %1\n").arg(CONFIG_READ_STRING(CONFIG_SECTION_SYSTEM_INFO, CONFIG_KEY_EMAIL, ""));
+    QString version = QString(">版本号: ToolGether-BSD-%1\n").arg(CONFIG_READ_STRING(CONFIG_SECTION_SYSTEM_INFO, CONFIG_KEY_VERSION, ""));
+    QString line = QString("-------------------------------------\n");
     ui->setupUi(this);
-
+    ui->planTextLog->appendPlainText(
+        line + author + email + version + line
+    );
     connect(LogOutput::getInstance(), &LogOutput::logOutToViewSlot, this, &MainLogWidget::onLogMessageReceived);
 }
 

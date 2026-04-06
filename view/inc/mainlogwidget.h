@@ -7,6 +7,11 @@
 
 #define LOG_MAX_LINES 100
 
+#define CONFIG_SECTION_SYSTEM_INFO "SystemInfo"
+#define CONFIG_KEY_EMAIL            "Email"
+#define CONFIG_KEY_VERSION          "Version"   
+
+
 namespace Ui {
 class MainLogWidget;
 }

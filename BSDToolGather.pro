@@ -9,6 +9,10 @@ CONFIG += c++17
 
 RC_ICONS = res/test.ico
 
+# libyuv库
+INCLUDEPATH += source/libyuv/include
+LIBS += -L$$PWD/source/libyuv/lib -lyuv
+
 
 SOURCES += \
     application/src/getimgapp.cpp \
